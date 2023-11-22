@@ -79,15 +79,19 @@
 <div class="row">
     <div class="col">
 
+        <!-- Si el formulario es valido -->
         <span>Valid</span>
         <pre>{{ myForm.valid | json }}</pre>
 
+        <!-- Si el formulario ha sido manipulado -->
         <span>Pristine</span>
         <pre>{{ myForm.pristine | json }}</pre>
 
+        <!-- Si el formulario ha sido tocado -->
         <span>Touched</span>
         <pre>{{ myForm.touched | json }}</pre>
 
+        <!-- Objeto con los datos del formulario -->
         <span>Value</span>
         <pre>{{ myForm.value | json }}</pre>
 
