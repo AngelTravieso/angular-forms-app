@@ -3,8 +3,12 @@
 
 <div class="row">
     <div class="col">
-
-        <form autocomplete="off">
+        <!-- Enlazar el formulario HTML con mi objeto (myForm) de mi componentes -->
+        <!--
+            ngSubmit es el evento del submit del formulario,
+            no se le pasa ningún argumento porque todo el formulario ya lo tengo a la mano
+        -->
+        <form [formGroup]="myForm" (ngSubmit)="onSave()" autocomplete="off">
 
             <!-- Campo de producto -->
             <div class="mb-3 row">
@@ -13,6 +17,7 @@
 
                     <input type="text"
                            class="form-control"
+                           formControlName="name"
                            placeholder="Nombre del producto">
 
                     <span class="form-text text-danger">
@@ -28,6 +33,7 @@
                 <div class="col-sm-9">
                     <input type="number"
                            class="form-control"
+                           formControlName="price"
                            placeholder="Precio del producto">
                     <span class="form-text text-danger">
                         El precio debe de ser 0 o mayor
@@ -41,6 +47,7 @@
                 <div class="col-sm-9">
                     <input type="number"
                            class="form-control"
+                           formControlName="inStorage"
                            placeholder="Existencias del producto">
 
                     <span class="form-text text-danger">
